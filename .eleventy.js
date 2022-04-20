@@ -2,8 +2,11 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const embedTwitter = require("eleventy-plugin-embed-twitter");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const embedTikTok = require("eleventy-plugin-embed-tiktok");
+const { EleventyEdgePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyEdgePlugin);
+
   eleventyConfig.ignores.add("./src/_sass");
   eleventyConfig.ignores.add("./src/_scripts");
 
